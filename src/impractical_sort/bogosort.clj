@@ -1,9 +1,19 @@
 (ns impractical-sort.bogosort)
 
-(defn ascending? [[x y & _ :as coll]]
+;; 1st implementation
+(defn ascending?-take1 [[x y & _ :as coll]]
   (if (nil? y) true
       (if (> x y) false
           (recur (rest coll)))))
+
+;; 2nd implementation
+(defn ascending?-take2 [coll]
+  (->> (partition-all 2 1 coll)
+       (every? #(apply <= %))))
+
+;; maybe final implementation
+(defn ascending? [coll]
+  (apply <= coll))
 
 (defn bogosort [coll]
   (if (ascending? coll) coll
