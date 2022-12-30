@@ -2,13 +2,11 @@
 
 (defn sleepsort [coll]
   (let [r (atom [])
-        size (count coll)
         f (fn [n]
             (Thread/sleep (* n 10))
             (swap! r conj n))]
-    (->> (pmap f coll)
-         (filter #(= size (count %)))
-         first)))
+    (doall (pmap f coll))
+    @r))
 
 ;;(time (sleepsort [9 6 0 7 1 5 2 3 8 4]))
 
