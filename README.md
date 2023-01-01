@@ -40,6 +40,6 @@ Impractical sorting algorithms
 
 ## License
 
-Copyright (c) 2022 hisaitami
+Copyright (c) 2023 hisaitami
 Distributed under the terms of the [MIT License](LICENSE)
 
