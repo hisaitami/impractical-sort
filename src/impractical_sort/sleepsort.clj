@@ -1,9 +1,11 @@
 (ns impractical-sort.sleepsort)
 
+(def sleep-interval-ms 10) ; Adjust for consistent results
+
 (defn sleepsort [coll]
   (let [r (atom [])
         f (fn [n]
-            (Thread/sleep (* n 10))
+            (Thread/sleep (* n sleep-interval-ms))
             (swap! r conj n))]
     (doall (pmap f coll))
     @r))
