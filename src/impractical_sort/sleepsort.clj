@@ -2,7 +2,11 @@
 
 (def delay-factor-msec 10) ; Adjust for consistent results
 
-(defn sleepsort [coll]
+(defn sleepsort
+  "For a given coll of natural numbers, sleep for the value of each element,
+  then add its own value to the resulting sequence"
+  [coll]
+  {:pre [(every? nat-int? coll)]}
   (let [r (atom [])
         f (fn [n]
             (Thread/sleep (* n delay-factor-msec))
