@@ -7,7 +7,8 @@
     (is (true? (ascending? [0 1 2])))         ; common case
     (is (true? (ascending? [1])))             ; just one
     (is (true? (ascending? [7 7 7])))         ; all the same
-    (is (true? (ascending? [0 1 1 2 2 3]))))  ; multiple duplicate values
+    (is (true? (ascending? [0 1 1 2 2 3])))   ; multiple duplicate values
+    (is (true? (ascending? ["a" "b" "c"]))))  ; strings
   (testing "Otherwise return false"
     (is (false? (ascending? [1 0])))          ; reversed simply
     (is (false? (ascending? [0 1 1 3 2]))))) ; dupicate and reversed
@@ -17,7 +18,8 @@
     (is (true? (descending? [2 1 0])))         ; common case
     (is (true? (descending? [1])))             ; just one
     (is (true? (descending? [7 7 7])))         ; all the same
-    (is (true? (descending? [3 2 2 1 1 0]))))  ; multiple duplicate values
+    (is (true? (descending? [3 2 2 1 1 0])))   ; multiple duplicate values
+    (is (true? (descending? ["c" "b" "a"]))))  ; strings
   (testing "Otherwise return false"
     (is (false? (descending? [0 1])))          ; reversed simply
     (is (false? (descending? [2 3 1 1 0])))))

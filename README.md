@@ -31,6 +31,10 @@ Impractical sorting algorithms
 ;; Generate any bogosorted sequence
 => (bogosort #(ascending? (take 10 %)) [11 0 5 18 17 19 14 9 1 7 10 13 15 3 8 4 12 16 6 2])
 [0 1 2 5 9 10 11 14 15 16 19 6 12 17 8 7 3 18 13 4]
+
+;; Sort strings
+=> (bogosort ["Dave" "Alice" "Ellen" "Charlie" "Bob" "Frank"])
+["Alice" "Bob" "Charlie" "Dave" "Ellen" "Frank"]
 ```
 
 ### sleepsort

@@ -1,10 +1,14 @@
 (ns impractical-sort.bogosort)
 
 (defn ascending? [coll]
-  (apply <= coll))
+  (->> (partition 2 1 coll)
+       (map #(>= 0 (apply compare %)))
+       (every? true?)))
 
 (defn descending? [coll]
-  (apply >= coll))
+  (->> (partition 2 1 coll)
+       (map #(<= 0 (apply compare %)))
+       (every? true?)))
 
 (defn bogosort
   "Returns a sorted sequence of the items in coll.
