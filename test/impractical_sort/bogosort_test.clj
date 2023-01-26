@@ -1,6 +1,6 @@
 (ns impractical-sort.bogosort-test
-  (:require [clojure.test :refer :all]
-            [impractical-sort.bogosort :refer :all]))
+  (:require [clojure.test :refer [deftest is testing]]
+            [impractical-sort.bogosort :refer [ascending? descending? bogosort]]))
 
 (deftest ascending?-test
   (testing "Returns true if sorted in ascending order"

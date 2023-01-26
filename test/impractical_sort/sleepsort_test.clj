@@ -1,5 +1,5 @@
 (ns impractical-sort.sleepsort-test
-  (:require [clojure.test :refer :all]
+  (:require [clojure.test :refer [deftest is]]
             [impractical-sort.sleepsort :refer [sleepsort]]))
 
 (deftest sleepsort-test
