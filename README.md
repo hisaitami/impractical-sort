@@ -12,7 +12,7 @@ Impractical sorting algorithms
 
 ### bogosort
 
-```
+```clojure
 => (use 'impractical-sort.bogosort)
 
 ; It takes a time
@@ -39,7 +39,7 @@ Impractical sorting algorithms
 
 ### sleepsort
 
-```
+```clojure
 (use 'impractical-sort.sleepsort)
 
 ; Faster than bogosort in most cases
