@@ -13,7 +13,7 @@
    (bogosort ascending? coll))
   ([pred coll]
    (if (pred coll) coll
-     (recur pred (shuffle coll)))))
+       (recur pred (shuffle coll)))))
 
 (comment
   (time (bogosort [9 6 0 7 1 5 2 3 8 4])))
