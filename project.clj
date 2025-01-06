@@ -3,5 +3,5 @@
   :url "https://github.com/hisaitami/impractical-sort"
   :license {:name "The MIT License"
             :url "https://github.com/hisaitami/impractical-sort/blob/main/LICENSE"}
-  :dependencies [[org.clojure/clojure "1.11.4"]]
+  :dependencies [[org.clojure/clojure "1.12.0"]]
   :repl-options {:init-ns impractical-sort.core})
